@@ -42,13 +42,10 @@ flowchart TD
     C --> E[Embedding Layer]
     E --> V[FAISS Vector Index]
     V --> R[Top-K Retrieval]
-
     R --> F[Hard Filtering Layer<br/>Headers, Captions, Tokens]
     F --> D[Answer Decision Logic]
-
     D -->|Evidence| X[Extractive RAG<br/>Cited Evidence]
     D -->|Synthesis| G[Generative RAG<br/>LLM + Citations]
-
     G -->|Quota / Error| X
 
 ## RAG Pipeline (Step-by-Step)
