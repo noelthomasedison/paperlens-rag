@@ -49,6 +49,23 @@ flowchart TD
     D -->|Synthesis| G[Generative RAG<br/>LLM + Citations]
     G -->|Quota / Error| X
 ```
+## Project File Structure
+```text
+paperlens-rag-/
+  app.py
+  rag.py
+  eval.py
+  requirements.txt
+  README.md
+```
+
+## Run
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
+```
 
 ## RAG Pipeline (Step-by-Step)
 
@@ -211,22 +228,3 @@ This is a design strength, not a weakness.
 ## One-Line Summary
 
 PaperLens RAG is a hybrid RAG system that prioritizes grounded evidence retrieval for scientific PDFs, with optional LLM-based synthesis and explicit hallucination prevention.
-
-
-## Project File Structure
-```text
-paperlens-rag-/
-  app.py
-  rag.py
-  eval.py
-  requirements.txt
-  README.md
-```
-
-## Run
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-streamlit run app.py
-```
