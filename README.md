@@ -36,6 +36,7 @@ Both modes use the same retrieval pipeline.
 ## System Architecture Diagram
 
 flowchart TD
+
     U[User<br/>Streamlit UI]
     U -->|Upload PDF| P[PDF Processing]
     P -->|Extract Pages| C[Chunking<br/>Overlapping Windows]
