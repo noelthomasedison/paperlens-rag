@@ -35,8 +35,8 @@ Both modes use the same retrieval pipeline.
 
 ## System Architecture Diagram
 
+```mermaid
 flowchart TD
-
     U[User<br/>Streamlit UI]
     U -->|Upload PDF| P[PDF Processing]
     P -->|Extract Pages| C[Chunking<br/>Overlapping Windows]
@@ -48,6 +48,7 @@ flowchart TD
     D -->|Evidence| X[Extractive RAG<br/>Cited Evidence]
     D -->|Synthesis| G[Generative RAG<br/>LLM + Citations]
     G -->|Quota / Error| X
+```
 
 ## RAG Pipeline (Step-by-Step)
 
